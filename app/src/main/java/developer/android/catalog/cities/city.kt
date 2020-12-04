@@ -1,4 +1,4 @@
-package developer.android.catalog
+package developer.android.catalog.cities
 
 import java.io.Serializable
 

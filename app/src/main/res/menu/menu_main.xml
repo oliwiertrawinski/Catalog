@@ -7,24 +7,24 @@
     <item
         android:id="@+id/nothing_filter"
         android:orderInCategory="100"
-        android:title="Wszystko" />
+        android:title="@string/filter_nothing" />
     <item
         android:id="@+id/liked_filter"
         android:orderInCategory="100"
-        android:title="Ulubione" />
+        android:title="@string/filter_liked" />
     <item
         android:id="@+id/poland_filter"
         android:orderInCategory="101"
-        android:title="Polska"
+        android:title="@string/filter_poland"
         app:showAsAction="never" />
     <item
         android:id="@+id/italy_filter"
         android:orderInCategory="101"
-        android:title="Włochy"
+        android:title="@string/filter_italy"
         app:showAsAction="never" />
     <item
         android:id="@+id/germany_filter"
         android:orderInCategory="101"
-        android:title="Niemcy"
+        android:title="@string/filter_germany"
         app:showAsAction="never" />
 </menu>

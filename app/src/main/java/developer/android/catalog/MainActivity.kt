@@ -1,25 +1,23 @@
 package developer.android.catalog
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_main.*
+import developer.android.catalog.cities.CityAdapter
+import developer.android.catalog.cities.CityViewModel
+import developer.android.catalog.cities.FilterCategory
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var cityViewModel: CityViewModel
     lateinit var cityAdapter: CityAdapter
 
-    var flag: Boolean = true
+    //var flag: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,13 +26,12 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.setHasFixedSize(true)
         recyclerView.setItemViewCacheSize(20)
-//        recyclerView.setDrawingCacheEnabled(true)
-//        recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH)
         cityAdapter = CityAdapter()
         recyclerView.adapter = cityAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        cityViewModel = CityViewModel(application)
+        cityViewModel =
+            CityViewModel(application)
         cityViewModel.mutableCityList.observe(this, Observer {
             cityAdapter.setCityData(it)
         })
@@ -95,6 +92,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        cityViewModel.filter(FilterCategory.NOTHING)
         /*
         if(flag)
             cityViewModel.filter(FilterCategory.LIKED)

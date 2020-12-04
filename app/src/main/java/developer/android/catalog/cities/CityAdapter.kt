@@ -1,4 +1,4 @@
-package developer.android.catalog
+package developer.android.catalog.cities
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import developer.android.catalog.R
+import developer.android.catalog.description.DescriptionActivity
 
 class CityAdapter: RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
 
@@ -50,7 +52,7 @@ class CityAdapter: RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
             likeImageButton = itemView.findViewById<ImageButton>(R.id.likeImageButton)
         }
 
-        fun bind(city:City){
+        fun bind(city: City){
 
             cityImegaView.setImageResource(city.image)
             nameTextView.setText(city.name)

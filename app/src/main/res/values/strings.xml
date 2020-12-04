@@ -7,4 +7,9 @@
     <string name="spis_atrakcji"><b>Spis Atrakcji</b></string>
     <string name="galeria_zdj"><b>Galeria zdjęć</b></string>
     <string name="informacje_o_miescie"><b>Informacje o mieście</b></string>
+    <string name="filter_nothing">Wszystko</string>
+    <string name="filter_liked">Ulubione</string>
+    <string name="filter_poland">Polska</string>
+    <string name="filter_italy">Włochy</string>
+    <string name="filter_germany">Niemcy</string>
 </resources>

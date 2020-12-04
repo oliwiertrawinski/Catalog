@@ -1,10 +1,11 @@
-package developer.android.catalog
+package developer.android.catalog.description
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import developer.android.catalog.R
 import kotlinx.android.synthetic.main.gallery_item.view.*
 
 class GalleryImageAdapter( private val images: ArrayList<Int>) :
@@ -16,7 +17,13 @@ class GalleryImageAdapter( private val images: ArrayList<Int>) :
   }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorViewHolder {
-    return ColorViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.gallery_item, parent, false))
+    return ColorViewHolder(
+        LayoutInflater.from(parent.context).inflate(
+            R.layout.gallery_item,
+            parent,
+            false
+        )
+    )
   }
 
   override fun onBindViewHolder(holder: ColorViewHolder, position: Int) {

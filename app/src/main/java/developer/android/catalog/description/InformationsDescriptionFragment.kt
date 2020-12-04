@@ -1,4 +1,4 @@
-package developer.android.catalog
+package developer.android.catalog.description
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import developer.android.catalog.cities.City
+import developer.android.catalog.R
 
 class InformationsDescriptionFragment(var city: City) : Fragment() {
 

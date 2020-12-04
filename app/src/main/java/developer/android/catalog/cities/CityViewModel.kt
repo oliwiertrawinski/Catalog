@@ -1,14 +1,20 @@
-package developer.android.catalog
+package developer.android.catalog.cities
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import developer.android.catalog.R
+import developer.android.catalog.cities.Category
+import developer.android.catalog.cities.City
+import developer.android.catalog.cities.FilterCategory
 
 class CityViewModel(application: Application) : AndroidViewModel(application) {
 
     var mutableCityList: MutableLiveData<MutableList<City>>
-    private var defaultList: MutableList<City>
 
+
+    private var defaultList: MutableList<City>
+     // nie wiedziałem jak reformatować kod, żeby każde miasto było w jednej linii a nie w kilku
     init{
         val wroclawInfo = "Wrocław, stolica Dolnego Śląska, jest jednym z najstarszych i najpiękniejszych miast w Polsce.\n" +
                 "Położony u podnóża Sudetów, nad rzeką Odrą , poprzecinany jej licznymi dopływami i kanałami, jest wyjątkowym miastem 12 wysp i ponad stu mostów.Goście Wrocławia wspominają go przede wszystkim jako prężny ośrodek kultury.\n" +
@@ -44,14 +50,79 @@ class CityViewModel(application: Application) : AndroidViewModel(application) {
                 "+ Rotunda Neroberg \n+ Kochbrunnen"
 
         defaultList = mutableListOf(
-            City("Wrocław", R.drawable.drawable_wroclaw, Category.POLSKA, wroclawInfo,wroclawAttrac,false,getGallery(4)),
-            City("Poznań", R.drawable.drawable_poznan, Category.POLSKA, poznanInfo, poznanAttrac, false, getGallery(4)),
-            City("Florencja", R.drawable.drawable_florencja, Category.WLOCHY, florencjaInfo, florencjaAttrac,false,getGallery(4)),
-            City("Neapol", R.drawable.drawable_neapol, Category.WLOCHY, neapolInfo, neapolAttrac,false,getGallery(6)),
-            City("Palermo", R.drawable.drawable_palermo, Category.WLOCHY, palermoInfo, palermoAttrac,false,getGallery(4)),
-            City("Mediolan", R.drawable.drawable_mediolan, Category.WLOCHY, mediolanInfo, mediolanAttrac,false,getGallery(6)),
-            City("Heidelberg", R.drawable.drawable_heidelberg, Category.NIEMCY, heidelbergInfo, heidelbergAttrac,false,getGallery(4)),
-            City("Wiesbaden", R.drawable.drawable_wiesbaden, Category.NIEMCY, wiesbadenInfo, wiesbadenAttrac,false,getGallery(12)))
+            City(
+                "Wrocław",
+                R.drawable.drawable_wroclaw,
+                Category.POLSKA,
+                wroclawInfo,
+                wroclawAttrac,
+                false,
+                getGallery(4)
+            ),
+            City(
+                "Poznań",
+                R.drawable.drawable_poznan,
+                Category.POLSKA,
+                poznanInfo,
+                poznanAttrac,
+                false,
+                getGallery(4)
+            ),
+            City(
+                "Florencja",
+                R.drawable.drawable_florencja,
+                Category.WLOCHY,
+                florencjaInfo,
+                florencjaAttrac,
+                false,
+                getGallery(4)
+            ),
+            City(
+                "Neapol",
+                R.drawable.drawable_neapol,
+                Category.WLOCHY,
+                neapolInfo,
+                neapolAttrac,
+                false,
+                getGallery(6)
+            ),
+            City(
+                "Palermo",
+                R.drawable.drawable_palermo,
+                Category.WLOCHY,
+                palermoInfo,
+                palermoAttrac,
+                false,
+                getGallery(4)
+            ),
+            City(
+                "Mediolan",
+                R.drawable.drawable_mediolan,
+                Category.WLOCHY,
+                mediolanInfo,
+                mediolanAttrac,
+                false,
+                getGallery(6)
+            ),
+            City(
+                "Heidelberg",
+                R.drawable.drawable_heidelberg,
+                Category.NIEMCY,
+                heidelbergInfo,
+                heidelbergAttrac,
+                false,
+                getGallery(4)
+            ),
+            City(
+                "Wiesbaden",
+                R.drawable.drawable_wiesbaden,
+                Category.NIEMCY,
+                wiesbadenInfo,
+                wiesbadenAttrac,
+                false,
+                getGallery(12)
+            )
+        )
 
 
         mutableCityList = MutableLiveData()
@@ -86,9 +157,12 @@ class CityViewModel(application: Application) : AndroidViewModel(application) {
                 }
                 mutableCityList.value = result
             }
-            FilterCategory.NIEMCY -> filterCountry(Category.NIEMCY)
-            FilterCategory.POLSKA -> filterCountry(Category.POLSKA)
-            FilterCategory.WLOCHY -> filterCountry(Category.WLOCHY)
+            FilterCategory.NIEMCY -> filterCountry(
+                Category.NIEMCY)
+            FilterCategory.POLSKA -> filterCountry(
+                Category.POLSKA)
+            FilterCategory.WLOCHY -> filterCountry(
+                Category.WLOCHY)
         }
     }
 
@@ -106,8 +180,16 @@ class CityViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun getGallery(elements: Int): ArrayList<Int> {
-        val imageList = mutableListOf(R.drawable.drawable_florencja,R.drawable.drawable_heidelberg,R.drawable.drawable_poznan,R.drawable.drawable_wroclaw,
-            R.drawable.drawable_neapol,R.drawable.drawable_mediolan,R.drawable.drawable_palermo,R.drawable.drawable_wiesbaden)
+        val imageList = mutableListOf(
+            R.drawable.drawable_florencja,
+            R.drawable.drawable_heidelberg,
+            R.drawable.drawable_poznan,
+            R.drawable.drawable_wroclaw,
+            R.drawable.drawable_neapol,
+            R.drawable.drawable_mediolan,
+            R.drawable.drawable_palermo,
+            R.drawable.drawable_wiesbaden
+        )
         val toReturn: ArrayList<Int> = ArrayList()
         for (i in 1..elements) {
             imageList.shuffle()

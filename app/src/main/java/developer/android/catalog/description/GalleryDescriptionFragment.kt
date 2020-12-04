@@ -1,4 +1,4 @@
-package developer.android.catalog
+package developer.android.catalog.description
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import developer.android.catalog.cities.City
+import developer.android.catalog.R
 
 
 class GalleryDescriptionFragment(var city: City) : Fragment() {
@@ -23,7 +25,8 @@ class GalleryDescriptionFragment(var city: City) : Fragment() {
         rv.layoutManager = sglm
 
 
-        val igka = GalleryImageAdapter(city.gallery)
+        val igka =
+            GalleryImageAdapter(city.gallery)
         rv.adapter = igka
         return view
     }
