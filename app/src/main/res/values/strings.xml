@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Katalog Miast</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stats">stats</string>
+    <string name="EXTRA_CITY">currentCity</string>
+    <string name="spis_atrakcji"><b>Spis Atrakcji</b></string>
+    <string name="galeria_zdj"><b>Galeria zdjęć</b></string>
+    <string name="informacje_o_miescie"><b>Informacje o mieście</b></string>
+</resources>

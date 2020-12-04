@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="developer.android.catalog.MainActivity">
+    <item
+        android:id="@+id/nothing_filter"
+        android:orderInCategory="100"
+        android:title="Wszystko" />
+    <item
+        android:id="@+id/liked_filter"
+        android:orderInCategory="100"
+        android:title="Ulubione" />
+    <item
+        android:id="@+id/poland_filter"
+        android:orderInCategory="101"
+        android:title="Polska"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/italy_filter"
+        android:orderInCategory="101"
+        android:title="Włochy"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/germany_filter"
+        android:orderInCategory="101"
+        android:title="Niemcy"
+        app:showAsAction="never" />
+</menu>
