@@ -27,7 +27,7 @@ class CityViewModel(application: Application) : AndroidViewModel(application) {
 
 
         val wroclawAttrac = "+ Hala Stulecia \n" + "+ Stare Miasto\n" + "+ Ostrów Tumski \n"+ "+ Panorama Racłwwicka\n"+ "+ Wrocławska Fontanna Multimedialna\n"+
-                "+ Ogród zoologiczny\n+ Narodowe Forum Muzyki\n+ Pooooliiinkaaa"
+                "+ Ogród zoologiczny\n+ Narodowe Forum Muzyki\n+ Muzeum Pana Tadeusza\n+ Pooooliiinkaaa"
         val poznanAttrac = "+ Stary Rynek \n" + "+ Stare Miasto\n" + "+ Ostrów Tumski \n"+ "+ Dzielnica Cesarska\n"+ "+ Fara i dawne kolegium jezuickie\n"+
                 "+ Malta \n+ Stary Browar\n+ Palmiarnia Poznańska"
         val florencjaAttrac = "+ Katedra Santa Maria del Fiore \n" + "+ dzwonnica Giotta di Bondone\n" + "+ baptysterium San Giovanni \n"+ "+ Galeria Uffizi\n"+
